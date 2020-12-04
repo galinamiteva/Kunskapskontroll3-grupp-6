@@ -8,6 +8,8 @@
 body {
     height: 100vh;
     background-image: url("https://wallpapercave.com/wp/Xmmby6p.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-weight: bold;
     color: rgb(255, 255, 255);
     
