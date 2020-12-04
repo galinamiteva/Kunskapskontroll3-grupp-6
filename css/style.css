@@ -8,8 +8,6 @@
 body {
     height: 100vh;
     background-image: url("https://wallpapercave.com/wp/Xmmby6p.jpg") ;
-    background-repeat: no-repeat;
-    background-size: cover;
     font-weight: bold;
     color: rgb(255, 255, 255);
     
@@ -58,6 +56,8 @@ body {
   
 .card.letsFlip {
     transform: rotateY(180deg);
+    animation-name: flipInY;
+    animation-duration: .75s;
   }
 
 
@@ -72,3 +72,32 @@ body {
     position: absolute;
     backface-visibility: hidden;
   }
+
+
+
+
+  @keyframes flipInY {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		transform: perspective(400px);
+	}
+}
